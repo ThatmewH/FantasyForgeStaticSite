@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fantasy Forge — AI-Powered Text Adventures &amp; RPGs</title>
+  <meta name="description" content="Fantasy Forge is an app for creating, sharing and playing AI-powered text adventures. An AI Game Master narrates every choice, illustrates every scene and voices every character — play solo or with up to four friends.">
+  <meta name="theme-color" content="#09080d">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fantasy Forge">
+  <meta property="og:title" content="Fantasy Forge — AI-Powered Text Adventures">
+  <meta property="og:description" content="Create, share and play immersive AI-driven RPG adventures — solo or with up to four friends.">
+  <meta property="og:image" content="https://thatmewh.github.io/FantasyForgeStaticSite/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Fantasy Forge gem logo glowing above the words AI-powered text adventures">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/cinzel.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/eb-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/gem.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fantasy Forge",
+    "alternateName": "FantasyForge AI Stories & RPGs",
+    "description": "Create, share and play AI-powered text-based RPG adventures, solo or with friends.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Android, Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "Hinz Apps" },
+    "sameAs": [
+      "https://play.google.com/store/apps/details?id=com.HinzApps.FableForge",
+      "https://playfantasyforge.com/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Reusable icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path fill="#00d7fe" d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/>
+        <path fill="#ffce00" d="m16.8 8.6 3.4 1.9c1.1.6 1.1 2.4 0 3l-3.4 1.9L13.4 12z"/>
+        <path fill="#ff3a44" d="M16.8 15.4 13.4 12 3.6 22.2c.4.2.9.2 1.4-.1z"/>
+        <path fill="#00f076" d="M16.8 8.6 5 1.9c-.5-.3-1-.3-1.4-.1L13.4 12z"/>
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 5.5c2.8-.9 5.8-.6 9 1.2 3.2-1.8 6.2-2.1 9-1.2V19c-2.8-.9-5.8-.6-9 1.2-3.2-1.8-6.2-2.1-9-1.2z"/><path d="M12 6.7v13.5"/>
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9.5" cy="8" r="3.2"/><path d="M3.5 19v-1.2A3.8 3.8 0 0 1 7.3 14h4.4a3.8 3.8 0 0 1 3.8 3.8V19"/><path d="M15.5 4.9a3.2 3.2 0 0 1 0 6.2M20.5 19v-1.2a3.8 3.8 0 0 0-2.6-3.6"/>
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m3.5 16.5 5-5 4 4 2.5-2.5 5.5 5.5"/><circle cx="15.5" cy="8.8" r="1.6"/>
+      </symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>
+      </symbol>
+      <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6z"/><path d="M9 4v14M15 6v14"/>
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 16.5 9 5 9-5"/>
+      </symbol>
+      <symbol id="i-user-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1a4.5 4.5 0 0 1 4.5-4.5h4a4.5 4.5 0 0 1 4.5 4.5v1M19 8v6M16 11h6"/>
+      </symbol>
+      <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5.5l11-2V16"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/>
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/>
+      </symbol>
+      <symbol id="i-erase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 7h16M9.5 7V4.5h5V7M6 7l1 13h10l1-13M10 11v5M14 11v5"/>
+      </symbol>
+      <symbol id="i-triangle" viewBox="0 0 14 14" fill="currentColor">
+        <path d="M3.5 1.6v10.8c0 .6.7 1 1.2.7l8.3-5.4c.5-.3.5-1.1 0-1.4L4.7.9c-.5-.3-1.2.1-1.2.7z"/>
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3.4 20.4 21 12 3.4 3.6l.1 6.5L15 12 3.5 13.9z"/>
+      </symbol>
+      <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 5 7 7-7 7"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Fantasy Forge — home">
+        <img src="assets/img/gem-96.png" width="27" height="32" alt="">
+        <span>Fantasy Forge</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#play">Try it</a>
+        <a href="#features">Features</a>
+        <a href="#worlds">Worlds</a>
+        <a href="#create">Create</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy-policty.html">Privacy</a>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="https://playfantasyforge.com/" target="_blank" rel="noopener"><svg width="11" height="11" aria-hidden="true"><use href="#i-triangle"/></svg>Play</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-inner">
+        <div class="gem-stage" aria-hidden="true">
+          <div class="gem-float">
+            <img class="gem" src="assets/img/gem.webp" width="525" height="625" alt="" fetchpriority="high">
+            <span class="gem-shine"></span>
+          </div>
+        </div>
+
+        <h1 class="hero-title" id="hero-title"><span class="gilded">Fantasy Forge</span></h1>
+        <p class="hero-ornament">AI-powered text adventures</p>
+        <p class="hero-lead">
+          Create, share and play immersive role-playing adventures where an <strong>AI Game Master</strong>
+          narrates every choice, paints every scene and gives a voice to every character — solo, or with up to four friends.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-play" href="https://playfantasyforge.com/" target="_blank" rel="noopener">
+            <span class="play-disc" aria-hidden="true"><svg width="14" height="14"><use href="#i-triangle"/></svg></span>
+            <span class="store-text"><small>Free in your browser</small><strong>Play now</strong></span>
+          </a>
+          <a class="btn btn-ghost btn-store" href="https://play.google.com/store/apps/details?id=com.HinzApps.FableForge" target="_blank" rel="noopener">
+            <svg width="26" height="26" aria-hidden="true"><use href="#i-play"/></svg>
+            <span class="store-text"><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+
+        <ul class="hero-meta" aria-label="At a glance">
+          <li>Free to play</li>
+          <li>Android &amp; web</li>
+          <li>Up to 5 players</li>
+        </ul>
+      </div>
+
+      <a class="scroll-cue" href="#play">Begin</a>
+    </section>
+
+    <!-- ============ STORY DEMO ============ -->
+    <section class="section demo" id="play" aria-labelledby="play-title">
+      <div class="container demo-grid">
+        <div class="demo-copy reveal">
+          <p class="eyebrow">A taste of play</p>
+          <h2 id="play-title">Say anything. <span class="gilded">The story answers.</span></h2>
+          <p class="lead">
+            There are no fixed scripts in Fantasy Forge. An AI Game Master reads every action you take,
+            remembers your character, your inventory and every choice you've made — then weaves what happens next.
+          </p>
+          <ul class="checks">
+            <li>Describe your actions in plain words — fight, bargain, sneak, or try something nobody has thought of</li>
+            <li>Health, items and map locations update as the story unfolds</li>
+            <li>Every scene is illustrated, scored and voiced to match your world</li>
+          </ul>
+          <p class="fine">Try the short preview. It's scripted for this page — in the app, the AI writes every reply live.</p>
+        </div>
+
+        <div class="tome reveal" data-delay="1" data-story>
+          <div class="tome-scene">
+            <img src="assets/img/worlds/library.webp" width="720" height="1080" loading="lazy" alt="A candlelit gothic library where glowing sigils burn on the floor">
+            <div class="tome-location"><span class="dot" aria-hidden="true"></span><span data-location>The Lantern Library</span></div>
+          </div>
+          <div class="tome-hud">
+            <div class="hp"><span class="hud-label">HP</span><div class="bar" aria-hidden="true"><i data-hp-bar></i></div><span class="hp-num" data-hp>100</span></div>
+            <div class="inv"><span class="hud-label">Pack</span><span class="inv-items" data-inv>Empty</span></div>
+          </div>
+          <div class="tome-log" data-log aria-live="polite"></div>
+          <div class="tome-choices" data-choices></div>
+          <form class="tome-input" data-input>
+            <input type="text" placeholder="What do you do?" aria-label="Type your own action" maxlength="120" autocomplete="off">
+            <button type="submit" aria-label="Send action"><svg width="18" height="18" aria-hidden="true"><use href="#i-send"/></svg></button>
+          </form>
+          <div class="tome-toast" data-toast aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Everything in the forge</p>
+          <h2 id="features-title">A whole tabletop campaign, <span class="gilded">in your pocket</span></h2>
+          <p class="lead">Everything a great game night needs: a storyteller, a party, a map and a world that reacts.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature reveal">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>An AI Game Master</h3>
+            <p>A tireless storyteller that responds to anything you type. No dead ends, no "you can't do that".</p>
+          </article>
+          <article class="feature reveal" data-delay="1">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>Multiplayer lobbies</h3>
+            <p>Host a party of up to five players and explore branching storylines together in real time.</p>
+          </article>
+          <article class="feature reveal" data-delay="2">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-image"/></svg></span>
+            <h3>Illustrated scenes</h3>
+            <p>AI-generated art brings each moment to life, painted in the visual style of your world.</p>
+          </article>
+          <article class="feature reveal" data-delay="3">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-mic"/></svg></span>
+            <h3>Live voice chat</h3>
+            <p>Speak out loud to the characters you meet, and hear them answer in a voice of their own.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-map"/></svg></span>
+            <h3>Maps, sheets &amp; journals</h3>
+            <p>Interactive maps, character sheets and journals keep track of every stat, item and quest.</p>
+          </article>
+          <article class="feature reveal" data-delay="1">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Community library</h3>
+            <p>Browse trending, popular and new adventures made by other players — or publish your own.</p>
+          </article>
+          <article class="feature reveal" data-delay="2">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-user-plus"/></svg></span>
+            <h3>Friends &amp; parties</h3>
+            <p>Add friends, gather your regular party and jump straight into your next session together.</p>
+          </article>
+          <article class="feature reveal" data-delay="3">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-music"/></svg></span>
+            <h3>An original soundtrack</h3>
+            <p>Dozens of atmospheric tracks set the mood, from haunted corridors to battles on the high seas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Straight from the app</p>
+          <h2 id="gallery-title">Your choices. Your visuals. <span class="gilded">Your story.</span></h2>
+        </div>
+      </div>
+      <div class="gallery-track" data-track tabindex="0" aria-label="App screenshots">
+        <figure class="shot"><img src="assets/img/screens/screen-1.webp" width="560" height="1212" loading="lazy" alt="A sci-fi adventure: a pilot in a starship cockpit while the AI narrates a mission briefing"><figcaption>Sci-fi missions among the stars</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-2.webp" width="560" height="1212" loading="lazy" alt="Curated co-op adventures such as Waves of Redemption, for one to four friends"><figcaption>Curated co-op adventures</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-3.webp" width="560" height="1212" loading="lazy" alt="The community library, a searchable grid of player-made games"><figcaption>Thousands of community games</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-6.webp" width="560" height="1212" loading="lazy" alt="Live voice chat with an AI pirate captain called Captain Garrick"><figcaption>Talk with the characters you meet</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-5.webp" width="560" height="1212" loading="lazy" alt="The game editor, with a story blurb, genres, image style and main story events"><figcaption>Build your own adventures</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-4.webp" width="560" height="1212" loading="lazy" alt="The character editor, with a portrait, health and weapon stats"><figcaption>Deep character customisation</figcaption></figure>
+        <figure class="shot"><img src="assets/img/screens/screen-0.webp" width="560" height="1212" loading="lazy" alt="A romance storyline, illustrated with a candlelit balcony scene"><figcaption>Every genre, every mood</figcaption></figure>
+      </div>
+      <div class="gallery-controls">
+        <button class="round-btn" type="button" data-prev aria-label="Previous screenshots"><svg width="20" height="20" style="transform:scaleX(-1)" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <button class="round-btn" type="button" data-next aria-label="Next screenshots"><svg width="20" height="20" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ============ WORLDS ============ -->
+    <section class="section" id="worlds" aria-labelledby="worlds-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Choose your realm</p>
+          <h2 id="worlds-title">Every genre. <span class="gilded">Endless worlds.</span></h2>
+          <p class="lead">Fantasy, sci-fi, horror, mystery, piracy, romance and everything in between. If you can imagine it, you can play it.</p>
+        </div>
+
+        <div class="worlds-row reveal" data-worlds>
+          <article class="world" tabindex="0">
+            <img src="assets/img/worlds/library.webp" width="720" height="1080" loading="lazy" alt="">
+            <div class="world-body">
+              <span class="tag">Mystery</span>
+              <h3>Arcane Secrets</h3>
+              <p>Forbidden libraries, whispering tomes and spells that always come with a price.</p>
+            </div>
+          </article>
+          <article class="world" tabindex="0">
+            <img src="assets/img/worlds/sentinel.webp" width="720" height="1080" loading="lazy" alt="">
+            <div class="world-body">
+              <span class="tag">Epic fantasy</span>
+              <h3>Legends Reborn</h3>
+              <p>Fallen guardians, legendary blades and destinies written in starlight.</p>
+            </div>
+          </article>
+          <article class="world" tabindex="0">
+            <img src="assets/img/worlds/dungeon.webp" width="720" height="1080" loading="lazy" alt="">
+            <div class="world-body">
+              <span class="tag">Dungeon crawl</span>
+              <h3>Into the Deep</h3>
+              <p>Torchlit corridors, ancient traps and treasure worth every risk.</p>
+            </div>
+          </article>
+          <article class="world" tabindex="0">
+            <img src="assets/img/worlds/portal.webp" width="720" height="1080" loading="lazy" alt="">
+            <div class="world-body">
+              <span class="tag">Dark fantasy</span>
+              <h3>Blood Moon Gate</h3>
+              <p>Crimson skies, cursed gateways and heroes who walk the edge of ruin.</p>
+            </div>
+          </article>
+          <article class="world" tabindex="0">
+            <img src="assets/img/worlds/ring.webp" width="720" height="1080" loading="lazy" alt="">
+            <div class="world-body">
+              <span class="tag">Sci-fi &amp; beyond</span>
+              <h3>Other Worlds</h3>
+              <p>Alien frontiers, strange dimensions and whatever waits beyond the ring.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Adventures you can play">
+        <div class="marquee-track">
+          <ul>
+            <li>Waves of Redemption</li>
+            <li>Cosmic Odyssey: Starfleet</li>
+            <li>Elven Chronicles</li>
+            <li>The Backrooms</li>
+            <li>Lethal Labyrinth</li>
+            <li>SCP Containment</li>
+            <li>The Whispering Woods</li>
+            <li>Space Station 13: Mutiny</li>
+            <li>Mystery Mansion</li>
+          </ul>
+          <ul aria-hidden="true">
+            <li>Waves of Redemption</li>
+            <li>Cosmic Odyssey: Starfleet</li>
+            <li>Elven Chronicles</li>
+            <li>The Backrooms</li>
+            <li>Lethal Labyrinth</li>
+            <li>SCP Containment</li>
+            <li>The Whispering Woods</li>
+            <li>Space Station 13: Mutiny</li>
+            <li>Mystery Mansion</li>
+          </ul>
+        </div>
+      </div>
+      <p class="marquee-caption">A few of the adventures waiting in the library.</p>
+    </section>
+
+    <!-- ============ VOICE ============ -->
+    <section class="section voice" id="voice" aria-labelledby="voice-title">
+      <div class="container voice-grid">
+        <div class="voice-copy reveal">
+          <p class="eyebrow">Live voice chat</p>
+          <h2 id="voice-title">Speak. Listen. <span class="gilded">Connect.</span></h2>
+          <p class="lead">
+            Put down the keyboard and talk. Haggle with a pirate captain, swear an oath to a king or
+            interrogate a suspect out loud. Every character you meet can answer in their own voice, in real time.
+          </p>
+          <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.HinzApps.FableForge" target="_blank" rel="noopener">Hear it for yourself</a>
+        </div>
+        <div class="voice-visual reveal" data-delay="1" aria-hidden="true">
+          <div class="voice-orb">
+            <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+            <div class="wave left"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="voice-core"><svg><use href="#i-mic"/></svg></div>
+            <div class="wave right"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="voice-quote"><b>Captain Garrick</b>“Ahoy! The seas are full of secrets — what brings you aboard?”</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREATE ============ -->
+    <section class="section create" id="create" aria-labelledby="create-title">
+      <div class="container create-grid">
+        <div class="create-copy reveal">
+          <p class="eyebrow">For storytellers</p>
+          <h2 id="create-title">Become the <span class="gilded">Game Master</span></h2>
+          <p class="lead">Design a world once and let it play out differently every time. Build from scratch in the game editor, or let the AI tools draft a world from a single idea.</p>
+          <ol class="steps">
+            <li><h3>Write the premise</h3><p>A story blurb, your genres and the art style every scene is painted in.</p></li>
+            <li><h3>Cast your characters</h3><p>Portraits, health, weapons and personalities for heroes and villains alike.</p></li>
+            <li><h3>Map the world</h3><p>Lay out locations, connect them and plan the story events that drive the plot.</p></li>
+            <li><h3>Publish &amp; share</h3><p>Release it to the community and watch other players make it their own.</p></li>
+          </ol>
+        </div>
+
+        <div class="editor reveal" data-delay="1" data-editor aria-label="Example of the game editor" role="img">
+          <div class="editor-top">
+            <p class="editor-title">Game Editor</p>
+            <div class="editor-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="editor-tabs" aria-hidden="true"><span class="on">General</span><span>Characters</span><span>Map</span><span>Publish</span></div>
+          <div class="field"><span class="field-label">Title</span><div class="field-box title" data-ed-title>Waves of Redemption</div></div>
+          <div class="field"><span class="field-label">Story blurb</span><div class="field-box blurb" data-ed-blurb>Set sail into a world of swirling seas and shadowed alliances, where loyalty is tested and legends are forged.</div></div>
+          <div class="field"><span class="field-label">Genres</span><div class="chips" data-ed-genres><span class="chip">Adventure</span><span class="chip">Piracy</span><span class="chip">Moral choice</span></div></div>
+          <div class="field"><span class="field-label">Main story events</span>
+            <ol class="events" data-ed-events>
+              <li><b>1</b>Ready the crew of the frigate HMS Vanguard</li>
+              <li><b>2</b>Spot pirate sails on the horizon</li>
+              <li><b>3</b>Board the enemy ship amid cannon fire</li>
+            </ol>
+          </div>
+          <span class="btn btn-primary editor-publish" data-ed-publish aria-hidden="true">Publish to community</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ YOUR DATA ============ -->
+    <section class="section" id="your-data" aria-labelledby="data-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Your account, your data</p>
+          <h2 id="data-title">Sign in simply. <span class="gilded">Stay in control.</span></h2>
+          <p class="lead">Here's exactly what happens when you create a Fantasy Forge account, and why.</p>
+        </div>
+
+        <div class="data-grid">
+          <article class="data-card reveal">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Sign in your way</h3>
+            <p>Create an account with your email address, or continue with Google or Apple. Sign-in is handled by Google Firebase Authentication, so Fantasy Forge never stores your password.</p>
+          </article>
+          <article class="data-card reveal" data-delay="1">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-eye"/></svg></span>
+            <h3>What Google sign-in shares</h3>
+            <p>If you choose <strong>Continue with Google</strong>, Google shares your basic profile: your name, email address and profile picture. We use it only to create your account, sign you in and confirm your email address.</p>
+            <p>We never ask for access to your Gmail, contacts, Drive or any other Google data.</p>
+          </article>
+          <article class="data-card reveal" data-delay="2">
+            <span class="facet"><svg aria-hidden="true"><use href="#i-erase"/></svg></span>
+            <h3>Never sold. Delete any time.</h3>
+            <p>Your data is never sold and never used for advertising. In game, other players know you by the username you choose.</p>
+            <p>You can permanently delete your account and content at any time from <strong>Profile → Account Settings</strong>.</p>
+          </article>
+        </div>
+
+        <div class="data-links reveal">
+          <a class="btn btn-primary" href="privacy-policty.html">Read the Privacy Policy</a>
+          <a class="btn btn-ghost" href="account-deletion.html">How to delete your account</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">Before you <span class="gilded">set out</span></h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>What is Fantasy Forge?</summary>
+            <div class="answer"><p>Fantasy Forge is an app for creating, sharing and playing AI-powered, text-based role-playing adventures. You describe what your character does in your own words, and an AI Game Master narrates what happens. It illustrates the scenes, tracks your stats and inventory, and voices the characters you meet.</p></div>
+          </details>
+          <details>
+            <summary>Is it free?</summary>
+            <div class="answer"><p>Yes. Fantasy Forge is free to download and play. Optional in-app purchases, like token packs and memberships, give extra AI turns and premium features to players who want more.</p></div>
+          </details>
+          <details>
+            <summary>What can I play it on?</summary>
+            <div class="answer"><p>Android phones and tablets through <a href="https://play.google.com/store/apps/details?id=com.HinzApps.FableForge" target="_blank" rel="noopener">Google Play</a>, and any modern web browser at <a href="https://playfantasyforge.com/" target="_blank" rel="noopener">playfantasyforge.com</a>.</p></div>
+          </details>
+          <details>
+            <summary>Can I play with friends?</summary>
+            <div class="answer"><p>Absolutely. Host a lobby for up to five players, invite your friends and explore branching storylines together in real time. Everyone's actions shape the same story.</p></div>
+          </details>
+          <details>
+            <summary>Can I make my own adventures?</summary>
+            <div class="answer"><p>Yes. In the game editor you write your premise, pick genres and an art style, create characters with stats and weapons, then lay out locations and key story events. When it's ready, publish it for the community to play. If you'd like a head start, the AI tools can draft a world for you.</p></div>
+          </details>
+          <details>
+            <summary>How old do I need to be?</summary>
+            <div class="answer"><p>Fantasy Forge is intended for players aged 13 and over.</p></div>
+          </details>
+          <details>
+            <summary>How is my data used, and how do I delete my account?</summary>
+            <div class="answer"><p>We collect only what's needed to run your account and your games. Everything is explained in plain language in our <a href="privacy-policty.html">Privacy Policy</a>. You can delete your account permanently in the app at any time. See <a href="account-deletion.html">how to delete your account</a>.</p></div>
+          </details>
+          <details>
+            <summary>Who makes Fantasy Forge?</summary>
+            <div class="answer"><p>Fantasy Forge is made by Hinz Apps, an independent developer in Brisbane, Australia. Questions, feedback and bug reports are always welcome at <a href="mailto:thatmewh@gmail.com">thatmewh@gmail.com</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINALE ============ -->
+    <section class="finale" aria-labelledby="finale-title">
+      <div class="finale-bg" aria-hidden="true"><img src="assets/img/worlds/ring.webp" width="720" height="1080" loading="lazy" alt=""></div>
+      <div class="container reveal">
+        <p class="eyebrow">Forge your tale</p>
+        <h2 id="finale-title">Your legend begins with <span class="gilded">a single line</span></h2>
+        <p class="lead">Step through the gate. The story is waiting for you to write it.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-play" href="https://playfantasyforge.com/" target="_blank" rel="noopener">
+            <span class="play-disc" aria-hidden="true"><svg width="14" height="14"><use href="#i-triangle"/></svg></span>
+            <span class="store-text"><small>Free in your browser</small><strong>Play now</strong></span>
+          </a>
+          <a class="btn btn-ghost btn-store" href="https://play.google.com/store/apps/details?id=com.HinzApps.FableForge" target="_blank" rel="noopener">
+            <svg width="26" height="26" aria-hidden="true"><use href="#i-play"/></svg>
+            <span class="store-text"><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./"><img src="assets/img/gem-96.png" width="27" height="32" alt=""><span>Fantasy Forge</span></a>
+          <p>Forge your tale. Live your legend. AI-powered text adventures for storytellers and adventurers alike.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Play</h4>
+          <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.HinzApps.FableForge" target="_blank" rel="noopener">Google Play</a></li>
+            <li><a href="https://playfantasyforge.com/" target="_blank" rel="noopener">Play on the web</a></li>
+            <li><a href="#features">Features</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policty.html">Privacy Policy</a></li>
+            <li><a href="account-deletion.html">Delete your account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:thatmewh@gmail.com">thatmewh@gmail.com</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Hinz Apps · Brisbane, Australia</p>
+        <p>Fantasy Forge · <a href="privacy-policty.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
